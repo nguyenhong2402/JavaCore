@@ -43,4 +43,25 @@ public class CosmeticsRes {
         });
         print();
     }
+    public int getSoldmax(){
+        int max;
+        if (ct1.getQuantitySold() >= ct2.getQuantitySold()){
+            if (ct1.getQuantitySold()>=ct3.getQuantitySold()){
+                max = ct1.getQuantitySold();
+                System.out.println(ct1);
+            }else {
+                max = ct3.getQuantitySold();
+                System.out.println(ct3);
+            }
+        }else {
+            if (ct2.getQuantitySold()>= ct3.getQuantitySold()){
+                max = ct2.getQuantitySold();
+                System.out.println(ct2);
+            }else {
+                max = ct3.getQuantitySold();
+                System.out.println(ct3);
+            }
+        }
+        return max;
+    }
 }

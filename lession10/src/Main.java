@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
@@ -45,6 +42,21 @@ public class Main {
                 cr.sortSold();
                 fr.sortSold();
             case 4:
+                System.out.println("Số lượng đã bán nhiều nhất của từng mục: ");
+               int[] sort = new int[4];
+               sort[0]=house.getSoldmax();
+               sort[1]= fd.getSoldmax();
+               sort[2]=cr.getSoldmax();
+               sort[3]=fr.getSoldmax();
+               int max=sort[0];
+               for (int i = 0;i<sort.length;i++){
+                   if (sort[i]>max){
+                       max=sort[i];
+                   }
+               }
+                System.out.println("----------------------------------------");
+                System.out.println("Sản phẩm đã bán nhiều nhất được: " +max);
+
 
         }
     }

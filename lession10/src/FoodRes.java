@@ -43,4 +43,25 @@ public class FoodRes {
         });
         print();
     }
+    public int getSoldmax(){
+        int max;
+        if (fd1.getQuantitySold() >= fd2.getQuantitySold()){
+            if (fd1.getQuantitySold()>=fd3.getQuantitySold()){
+                max = fd1.getQuantitySold();
+                System.out.println(fd1);
+            }else {
+                max = fd3.getQuantitySold();
+                System.out.println(fd3);
+            }
+        }else {
+            if (fd2.getQuantitySold()>= fd3.getQuantitySold()){
+                max = fd2.getQuantitySold();
+                System.out.println(fd2);
+            }else {
+                max = fd3.getQuantitySold();
+                System.out.println(fd3);
+            }
+        }
+        return max;
+    }
 }

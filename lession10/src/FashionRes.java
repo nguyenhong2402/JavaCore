@@ -43,4 +43,25 @@ public class FashionRes {
         });
         print();
     }
+    public int getSoldmax(){
+        int max;
+        if (fs1.getQuantitySold() >= fs2.getQuantitySold()){
+            if (fs1.getQuantitySold()>=fs3.getQuantitySold()){
+                max = fs1.getQuantitySold();
+                System.out.println(fs1);
+            }else {
+                max = fs3.getQuantitySold();
+                System.out.println(fs3);
+            }
+        }else {
+            if (fs2.getQuantitySold()>= fs3.getQuantitySold()){
+                max = fs2.getQuantitySold();
+                System.out.println(fs2);
+            }else {
+                max = fs3.getQuantitySold();
+                System.out.println(fs3);
+            }
+        }
+        return max;
+    }
 }

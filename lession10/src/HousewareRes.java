@@ -44,8 +44,26 @@ public class HousewareRes {
         });
         print();
     }
-//    public int getSoldmax(){
-//
-//    }
+    public int getSoldmax(){
+        int max;
+        if (hr1.getQuantitySold() >= hr2.getQuantitySold()){
+            if (hr1.getQuantitySold()>=hr3.getQuantitySold()){
+                max = hr1.getQuantitySold();
+                System.out.println(hr1);
+            }else {
+                max = hr3.getQuantitySold();
+                System.out.println(hr3);
+            }
+        }else {
+            if (hr2.getQuantitySold()>= hr3.getQuantitySold()){
+                max = hr2.getQuantitySold();
+                System.out.println(hr2);
+            }else {
+                max = hr3.getQuantitySold();
+                System.out.println(hr3);
+            }
+        }
+    return max;
+    }
 
 }
