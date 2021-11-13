@@ -206,7 +206,7 @@ public class ProductRes extends Product {
         System.out.println("Nhập vào 1 chuỗi bất kỳ: ");
         String x = sc.nextLine();
         for (Product s : listProduct){
-            if(s.toString().contains(x)){
+            if(s.getName().contains(x)){
                 System.out.println(s);
             }
         }
