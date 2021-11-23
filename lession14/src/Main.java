@@ -24,7 +24,9 @@ public class Main {
             infor.inputInformation();
             isCheck = true;
         } catch (MyException e) {
-
+            System.out.println(e.getMessage());
+        } catch (NumberFormatException e){
+            e.printStackTrace();
         }
     }
 }
