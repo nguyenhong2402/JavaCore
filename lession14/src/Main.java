@@ -4,18 +4,27 @@ import java.io.IOException;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws MyException {
 	// write your code here
     Triangle tr = new Triangle();
     boolean isCheck = false;
+//    while (!isCheck){
+//        try {
+//            tr.check();
+//            isCheck = true;
+//        }catch (MyException e){
+//            System.out.println(e.getMessage());
+//        }catch (NumberFormatException e){
+//            System.out.println("Bạn đã nhập chữ vui lòng nhập số");
+//        }
+//    }
+        Information infor = new Information();
     while (!isCheck){
-        try {
-            tr.check();
+        try{
+            infor.inputInformation();
             isCheck = true;
-        }catch (TriangleException e){
-            System.out.println(e.getMessage());
-        }catch (NumberFormatException e){
-            System.out.println("Bạn đã nhập chữ vui lòng nhập số");
+        } catch (MyException e) {
+
         }
     }
 }
